@@ -158,7 +158,7 @@ def plot_comparative_analysis(comparative_data):
             ]
         })
 
-        plot_data_melted = pd.melt(plot_data, id_vars='Event', var_name='Period', value_name='Average Tourist Arrivals')
+        plot_data_melted = pd.melt(plot_data, id_vars='Event', var_name='Period', value_name='Average Tourist Arrivals') # type: ignore
 
         plt.figure(figsize=(10, 6))
         sns.barplot(x='Event', y='Average Tourist Arrivals', hue='Period', data=plot_data_melted, palette="viridis")
